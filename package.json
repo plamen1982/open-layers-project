@@ -14,16 +14,10 @@
     "build": "parcel build --public-url . index.html",
     "test:eslint": "eslint src/ --ext .js --ext .jsx",
     "pretest": "npm run test:eslint",
-    "precommit": "lint-staged",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "lint-staged": {
-    "*.{js,jsx,json,scss,css,md}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
+
   "postcss": {
     "modules": false,
     "plugins": {

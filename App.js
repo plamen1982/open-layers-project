@@ -3,16 +3,18 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Redirect
+  // Link
 } from "react-router-dom";
-import DrawAMap from './src/components/DrawAMap/DrawAMap';
+import Home from './src/components/screens/Home/Home';
 
 const App = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/draw-a-map" component={DrawAMap} />
-        <Route exact path="/draw-a-map" component={DrawAMap} />
+        <Route exact path="/home" component={Home} />
+        <Route exact path="/" render={() => <Redirect to="/home" />} />
+        <Route component={Home} />
       </Switch>
     </Router>
   );

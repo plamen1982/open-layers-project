@@ -4,7 +4,9 @@ import View from 'ol/View';
 import Tile from 'ol/layer/Tile';
 import OSM from 'ol/source/OSM';
 import { fromLonLat } from 'ol/proj';
-
+import { Grid } from '@material-ui/core';
+import { Container } from '@material-ui/core'
+import RadioGroup from '../../common/RadioGroup/RadioGroup';
 const DrawAMap = () => { 
     useEffect(() => { 
         new Map({
@@ -20,7 +22,16 @@ const DrawAMap = () => {
             })
         });
     }, [])
-    return <div id="map-container" style={{width:400, height: 400}}></div>;
+    return (
+        <Container style={{paddingTop: 50}}>
+            <Grid container spacing={5}>
+                <Grid md={6} item>
+                    <RadioGroup />
+                </Grid>
+                <Grid md={6} item id="map-container"/>
+            </Grid>
+        </Container>
+    );
 }
 
 
