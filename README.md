@@ -12,7 +12,7 @@ T- he core component of OpenLayers is the map (ol/Map). It is rendered to a targ
 import Map from 'ol/Map';
 
 var map = new Map({target: 'map'});
-View
+## View
 The map is not responsible for things like center, zoom level and projection of the map. Instead, these are properties of a ol/View instance.
 
 import View from 'ol/View';
@@ -31,7 +31,7 @@ To get remote data for a layer, OpenLayers uses ol/source/Source subclasses. The
 import OSM from 'ol/source/OSM';
 
 var osmSource = OSM();
-Layer
+## Layer
 A layer is a visual representation of data from a source. OpenLayers has four basic types of layers:
 
 ol/layer/Tile - Renders sources that provide tiled images in grids that are organized by zoom levels for specific resolutions.
