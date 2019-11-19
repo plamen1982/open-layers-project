@@ -1,0 +1,27 @@
+{
+  "name": "open-layers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build --public-url . index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plamen1982/open-layers-project.git"
+  },
+  "author": "Plamen Hristov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plamen1982/open-layers-project/issues"
+  },
+  "homepage": "https://github.com/plamen1982/open-layers-project#readme",
+  "dependencies": {
+    "ol": "^6.1.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
