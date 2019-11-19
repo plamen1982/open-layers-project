@@ -7,10 +7,12 @@ import {
   // Link
 } from "react-router-dom";
 import Home from './src/components/screens/Home/Home';
+import AppNavigationBar from './src/components/AppNavigationBar/AppNavigationBar'
 
 const App = () => {
   return (
     <Router>
+      <AppNavigationBar />
       <Switch>
         <Route exact path="/home" component={Home} />
         <Route exact path="/" render={() => <Redirect to="/home" />} />
