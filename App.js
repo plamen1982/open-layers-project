@@ -7,7 +7,8 @@ import {
   // Link
 } from "react-router-dom";
 import Home from './src/components/screens/Home/Home';
-import AppNavigationBar from './src/components/AppNavigationBar/AppNavigationBar'
+import AppNavigationBar from './src/components/AppNavigationBar/AppNavigationBar';
+import BottomNavigationBar from './src/components/BottomNavigationBar/BottomNavigationBar';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route exact path="/" render={() => <Redirect to="/home" />} />
         <Route component={Home} />
       </Switch>
+      <BottomNavigationBar />
     </Router>
   );
 }
