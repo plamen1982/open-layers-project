@@ -17,7 +17,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-
   "postcss": {
     "modules": false,
     "plugins": {
@@ -52,6 +51,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "cross-env": "^6.0.3",
     "eslint": "^6.6.0",
     "eslint-plugin-react": "^7.16.0",
     "gh-pages": "^2.1.1",

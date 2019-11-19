@@ -7,6 +7,8 @@ import { fromLonLat } from 'ol/proj';
 import { Grid } from '@material-ui/core';
 import { Container } from '@material-ui/core'
 import RadioGroup from '../../common/RadioGroup/RadioGroup';
+import Selects from '../../common/Selects/Selects';
+
 const DrawAMap = () => { 
     useEffect(() => { 
         new Map({
@@ -27,6 +29,7 @@ const DrawAMap = () => {
             <Grid container spacing={5}>
                 <Grid md={6} item>
                     <RadioGroup />
+                    <Selects />
                 </Grid>
                 <Grid md={6} item id="map-container"/>
             </Grid>
