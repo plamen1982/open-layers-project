@@ -1,5 +1,16 @@
-import ReactDOM from 'react-dom';
-import Router from './src/Router/Router';
-import React from 'react';
+/* global module */
+import React from "react";
+import { render } from "react-dom";
 
-ReactDOM.render(<Router />, document.querySelector('#container'));
+const root = document.getElementById("root");
+
+function renderApp() {
+  const App = require("./App").default;
+  render(<App />, root);
+}
+
+renderApp();
+
+if (module.hot) {
+  module.hot.accept(renderApp);
+}

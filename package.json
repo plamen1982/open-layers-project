@@ -3,27 +3,69 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html",
-    "build": "parcel build --public-url . index.html"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/plamen1982/open-layers-project.git"
-  },
   "author": "Plamen Hristov",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/plamen1982/open-layers-project/issues"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build --public-url . index.html",
+    "test:eslint": "eslint src/ --ext .js --ext .jsx",
+    "pretest": "npm run test:eslint",
+    "precommit": "lint-staged",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "lint-staged": {
+    "*.{js,jsx,json,scss,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "postcss": {
+    "modules": false,
+    "plugins": {
+      "autoprefixer": {
+        "browsers": [
+          ">1%",
+          "last 4 versions",
+          "Firefox ESR",
+          "not ie < 9"
+        ],
+        "flexbox": "no-2009"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plamen1982/open-layers-project.git"
+  },
   "homepage": "https://github.com/plamen1982/open-layers-project#readme",
   "dependencies": {
+    "@material-ui/core": "^4.6.1",
+    "@material-ui/icons": "^4.5.1",
     "ol": "^6.1.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "autoprefixer": "^9.7.2",
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^6.6.0",
+    "eslint-plugin-react": "^7.16.0",
+    "gh-pages": "^2.1.1",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.4.3",
+    "node-sass": "^4.13.0",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.19.1",
+    "react-hot-loader": "^4.12.18"
   }
 }

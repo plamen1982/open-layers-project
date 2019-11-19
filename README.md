@@ -66,3 +66,7 @@ new Map({
   }),
   target: 'map'
 });
+
+// for adding NODE_ENV: two more steps:  
+// TODO cross-env install and apply
+// "build": "NODE_ENV=production parcel build src/index.html --public-url https://marsbased.github.io/my-awesome-app/",
