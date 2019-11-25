@@ -5,7 +5,7 @@ import useCreateMap from '../../hooks/useCreateMap';
 import RadioGroup from '../../common/RadioGroup/RadioGroup';
 import Selects from '../../common/Selects/Selects';
 const DrawAMap = () => { 
-    useCreateMap();
+    useCreateMap('map-container');
     return (
         <Container style={{paddingTop: 50}}>
             <Grid container spacing={5}>

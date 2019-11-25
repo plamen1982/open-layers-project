@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import Map from 'ol/Map';
 import View from 'ol/View';
 import Tile from 'ol/layer/Tile';
 import OSM from 'ol/source/OSM';
 import { fromLonLat } from 'ol/proj';
-const useCreateMap = () => {
+const useCreateMap = (containerName) => {
     const [map, setMap] = useState(new Map());
     useEffect(() => {
             const newInstanceMap = new Map({
-            target: 'map-container',
+            target: containerName,
             layers: [
                 new Tile({
                     source: new OSM()
