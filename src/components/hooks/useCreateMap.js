@@ -4,7 +4,14 @@ import View from 'ol/View';
 import Tile from 'ol/layer/Tile';
 import OSM from 'ol/source/OSM';
 import { fromLonLat } from 'ol/proj';
-const useCreateMap = (containerName) => {
+
+/**
+ * @param  {string} containerName
+ * @param  {number} zoom
+ * @param  {array:[number, number]} center
+ * @returns {object} map - returns new instance of the map
+ */
+const useCreateMap = (containerName, zoom, center) => {
     const [map, setMap] = useState(new Map());
     useEffect(() => {
             const newInstanceMap = new Map({
@@ -15,8 +22,8 @@ const useCreateMap = (containerName) => {
                 })
             ],
             view: new View({
-                center: fromLonLat([37.41, 8.82]),
-                zoom: 5
+                center: fromLonLat(center),
+                zoom
             })
         });
         setMap(newInstanceMap)
