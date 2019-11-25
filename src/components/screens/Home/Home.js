@@ -1,30 +1,11 @@
-import React, { useEffect } from 'react';
-import Map from 'ol/Map';
-import View from 'ol/View';
-import Tile from 'ol/layer/Tile';
-import OSM from 'ol/source/OSM';
-import { fromLonLat } from 'ol/proj';
+import React from 'react';
 import { Grid } from '@material-ui/core';
-import { Container } from '@material-ui/core'
+import { Container } from '@material-ui/core';
+import useCreateMap from '../../hooks/useCreateMap';
 import RadioGroup from '../../common/RadioGroup/RadioGroup';
 import Selects from '../../common/Selects/Selects';
-import BottomNavigationBar from '../../BottomNavigationBar/BottomNavigationBar';
-
 const DrawAMap = () => { 
-    useEffect(() => { 
-        new Map({
-            target: 'map-container',
-            layers: [
-                new Tile({  
-                source: new OSM()
-                })
-            ],
-            view: new View({
-                center: fromLonLat([37.41, 8.82]),
-                zoom: 5
-            })
-        });
-    }, [])
+    useCreateMap();
     return (
         <Container style={{paddingTop: 50}}>
             <Grid container spacing={5}>
