@@ -21,7 +21,7 @@ const DrawAMap = () => {
             ],
             view: new View({
                 center: fromLonLat([37.41, 8.82]),
-                zoom: 1
+                zoom: 5
             })
         });
     }, [])

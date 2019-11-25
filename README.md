@@ -5,9 +5,9 @@
 - [Some background on OpenLayers](https://openlayers.org/en/latest/doc/tutorials/background.html)
 - [raster-reprojection](https://openlayers.org/en/latest/doc/tutorials/raster-reprojection.html)
 # [Examples official documentation](https://openlayers.org/en/latest/examples/)
-# Basic Concepts
+# Basic Concepts - [API DOC](https://openlayers.org/en/latest/apidoc/)
 ## Map
-T- he core component of OpenLayers is the map (ol/Map). It is **rendered** to a **target container** (e.g. a **div** element on the web page that contains the map). **All map properties can either be configured at construction time**, or by using **setter methods**, e.g. **setTarget()**.
+The core component of OpenLayers is the map (ol/Map). It is **rendered** to a **target container** (e.g. a **div** element on the web page that contains the map). **All map properties can either be configured at construction time**, or by using **setter methods**, e.g. **setTarget()**.
 
 - The markup below could be used to create a <div> that contains your map.
 
