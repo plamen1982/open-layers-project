@@ -6,9 +6,10 @@ import {
   Redirect
   // Link
 } from "react-router-dom";
-import Home from './src/components/screens/Home/Home';
-import AppNavigationBar from './src/components/AppNavigationBar/AppNavigationBar';
-import BottomNavigationBar from './src/components/BottomNavigationBar/BottomNavigationBar';
+import Home from './components/screens/Home/Home';
+import AppNavigationBar from './components/AppNavigationBar/AppNavigationBar';
+import BottomNavigationBar from './components/BottomNavigationBar/BottomNavigationBar';
+
 
 const App = () => {
   return (

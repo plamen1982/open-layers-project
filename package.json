@@ -9,28 +9,30 @@
     "url": "https://github.com/plamen1982/open-layers-project/issues"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html",
-    "build": "parcel build --public-url . index.html",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --passWithNoTests",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
+    "eject": "react-scripts eject",
+    "lint": "eslint src",
     "test:eslint": "eslint src/ --ext .js --ext .jsx",
     "pretest": "npm run test:eslint",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "postcss": {
-    "modules": false,
-    "plugins": {
-      "autoprefixer": {
-        "browsers": [
-          ">1%",
-          "last 4 versions",
-          "Firefox ESR",
-          "not ie < 9"
-        ],
-        "flexbox": "no-2009"
-      }
+  "husky": {
+    "hooks": {
+      "pre-push": "cross-env CI=true lint-staged"
     }
   },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier --write",
+      "eslint --max-warnings=0",
+      "git add"
+    ]
+  },
+  "eslint-plugin-react": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/plamen1982/open-layers-project.git"
@@ -42,7 +44,8 @@
     "ol": "^6.1.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2"
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.2",
@@ -58,8 +61,19 @@
     "husky": "^3.1.0",
     "lint-staged": "^9.4.3",
     "node-sass": "^4.13.0",
-    "parcel-bundler": "^1.12.4",
     "prettier": "^1.19.1",
     "react-hot-loader": "^4.12.18"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
