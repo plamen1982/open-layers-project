@@ -64,5 +64,17 @@
     "node-sass": "^4.13.0",
     "prettier": "^1.19.1",
     "react-hot-loader": "^4.12.18"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
