@@ -25,7 +25,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "cross-env CI=true lint-staged lint"
+      "pre-commit": "cross-env CI=true lint-staged lint",
+      "pre-push": "npm run test:husky"
     }
   },
   "lint-staged": {
