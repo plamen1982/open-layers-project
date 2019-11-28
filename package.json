@@ -9,28 +9,16 @@
     "url": "https://github.com/plamen1982/open-layers-project/issues"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html",
-    "build": "parcel build --public-url . index.html",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
+    "eject": "react-scripts eject",
+    "lint": "eslint src",
     "test:eslint": "eslint src/ --ext .js --ext .jsx",
     "pretest": "npm run test:eslint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "lint": "eslint src"
-  },
-  "postcss": {
-    "modules": false,
-    "plugins": {
-      "autoprefixer": {
-        "browsers": [
-          ">1%",
-          "last 4 versions",
-          "Firefox ESR",
-          "not ie < 9"
-        ],
-        "flexbox": "no-2009"
-      }
-    }
+    "deploy": "gh-pages -d dist"
   },
   "husky": {
     "hooks": {
@@ -45,9 +33,7 @@
       "git add"
     ]
   },
-  "eslint-plugin-react": {
-    
-  },
+  "eslint-plugin-react": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/plamen1982/open-layers-project.git"
