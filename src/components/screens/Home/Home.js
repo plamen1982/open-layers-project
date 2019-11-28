@@ -10,10 +10,12 @@ const DrawAMap = () => {
     const [center, setCenter] = useState([37.41, 8.82]);
     const map = useCreateMap('map-container', zoom, center);
     console.log(map);
-    useEffect(() => { 
-        setZoom(7);
-        setCenter([37.00, 8.00]);
-     }, [zoom, center])
+    console.log(setZoom)
+    console.log(setCenter)
+    // useEffect(() => { 
+    //     setZoom(7);
+    //     setCenter([37.00, 8.00]);
+    //  }, [zoom, center])
     return (
         <Container style={{paddingTop: 50}}>
             <Grid container spacing={5}>
