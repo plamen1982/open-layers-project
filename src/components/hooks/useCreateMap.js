@@ -26,6 +26,7 @@ const useCreateMap = (containerIdName, zoom, center) => {
                 zoom
             })
         });
+        //comment
         setMap(newInstanceMap)
      }, [containerIdName, zoom, center])
      
