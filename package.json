@@ -16,7 +16,6 @@
     "eject": "react-scripts eject",
     "lint": "eslint src",
     "test:eslint": "eslint src/ --ext .js --ext .jsx",
-    "pretest": "npm run test:eslint",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "doc": "jsdoc --configure .jsdoc.json --verbose",
