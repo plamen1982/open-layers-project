@@ -31,6 +31,11 @@
       }
     }
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "cross-env CI=true lint-staged"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/plamen1982/open-layers-project.git"
