@@ -5,8 +5,8 @@ import useCreateMap from '../../hooks/useCreateMap';
 import RadioGroup from '../../common/RadioGroup/RadioGroup';
 import Selects from '../../common/Selects/Selects';
 const DrawAMap = () => { 
-    const [zoom, setZoom] = useState(5);
-    const [center, setCenter] = useState([37.41, 8.82]);
+    // const [zoom, setZoom] = useState(5);
+    // const [center, setCenter] = useState([37.41, 8.82]);
     const map = useCreateMap('map-container', zoom, center);
     console.log(map);
     return (
