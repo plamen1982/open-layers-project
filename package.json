@@ -18,18 +18,29 @@
     "test:eslint": "eslint src/ --ext .js --ext .jsx",
     "pretest": "npm run test:eslint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "doc": "jsdoc --configure .jsdoc.json --verbose",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "husky": {
     "hooks": {
-      "pre-push": "cross-env CI=true lint-staged lint"
+      "pre-commit": "cross-env CI=true lint-staged lint"
     }
   },
   "lint-staged": {
     "src/**/*.js": [
       "prettier --write",
       "eslint --max-warnings=0",
+      "yarn test --bail --findRelatedTests",
       "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "eslint:recommended",
+      "plugin:react/recommended"
     ]
   },
   "repository": {
