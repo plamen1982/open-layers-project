@@ -15,7 +15,8 @@
     "test:eslint": "eslint src/ --ext .js --ext .jsx",
     "pretest": "npm run test:eslint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint src"
   },
   "postcss": {
     "modules": false,
@@ -43,6 +44,9 @@
       "yarn test --bail --findRelatedTests",
       "git add"
     ]
+  },
+  "eslint-plugin-react": {
+    
   },
   "repository": {
     "type": "git",
