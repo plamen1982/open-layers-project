@@ -36,6 +36,14 @@
       "pre-push": "cross-env CI=true lint-staged"
     }
   },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier --write",
+      "eslint --max-warnings=10",
+      "yarn test --bail --findRelatedTests",
+      "git add"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/plamen1982/open-layers-project.git"
