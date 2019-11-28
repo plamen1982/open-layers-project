@@ -29,7 +29,6 @@
     "src/**/*.js": [
       "prettier --write",
       "eslint --max-warnings=0",
-      "yarn test --bail --findRelatedTests",
       "git add"
     ]
   },
