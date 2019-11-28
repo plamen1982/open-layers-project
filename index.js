@@ -1,16 +1,6 @@
-/* global module */
-import React from "react";
-import { render } from "react-dom";
 
-const root = document.getElementById("root");
-
-function renderApp() {
-  const App = require("./App").default;
-  render(<App />, root);
-}
-
-renderApp();
-
-if (module.hot) {
-  module.hot.accept(renderApp);
-}
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+ReactDOM.render(<App />, document.getElementById('root'));
