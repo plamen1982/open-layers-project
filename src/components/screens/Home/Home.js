@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Grid } from '@material-ui/core';
 import { Container } from '@material-ui/core';
 import useCreateMap from '../../hooks/useCreateMap';
@@ -9,13 +9,9 @@ const DrawAMap = () => {
     const [zoom, setZoom] = useState(5);
     const [center, setCenter] = useState([37.41, 8.82]);
     const map = useCreateMap('map-container', zoom, center);
-    console.log(map);
-    console.log(setZoom)
-    console.log(setCenter)
-    // useEffect(() => { 
-    //     setZoom(7);
-    //     setCenter([37.00, 8.00]);
-    //  }, [zoom, center])
+    console.log('map', map);
+    console.log(setCenter);
+    console.log(setZoom);
     return (
         <Container style={{paddingTop: 50}}>
             <Grid container spacing={5}>

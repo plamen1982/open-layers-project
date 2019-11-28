@@ -22,7 +22,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "cross-env CI=true lint-staged"
+      "pre-push": "cross-env CI=true lint-staged lint"
     }
   },
   "lint-staged": {
@@ -32,7 +32,6 @@
       "git add"
     ]
   },
-  "eslint-plugin-react": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/plamen1982/open-layers-project.git"
