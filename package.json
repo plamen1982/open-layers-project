@@ -16,13 +16,16 @@
     "eject": "react-scripts eject",
     "lint": "eslint src",
     "test:eslint": "eslint src/ --ext .js --ext .jsx",
-    "pretest": "npm run test:eslint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "doc": "jsdoc --configure .jsdoc.json --verbose",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "husky": {
     "hooks": {
-      "pre-push": "cross-env CI=true lint-staged"
+      "pre-commit": "cross-env CI=true lint-staged lint",
+      "pre-push": "npm run test"
     }
   },
   "lint-staged": {
@@ -32,7 +35,13 @@
       "git add"
     ]
   },
-  "eslint-plugin-react": {},
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/plamen1982/open-layers-project.git"
